@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AIDE - Artificial Intelligence and Digital Evolution</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+<body>
+    <header>
+        <nav class="container">
+            <div class="logo">
+                <img src="{{ url_for('static', filename='images/aide-logo.png') }}" alt="AIDE Logo">
+                <span>AIDE</span>
+            </div>
+            <ul class="nav-links">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#services">Services</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#blog">Blog</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section id="home" class="hero">
+        <div class="container">
+            <h1>Artificial Intelligence<br>&amp;<br>Digital Evolution</h1>
+            <p>Making AI Understandable, Making You Unstoppable</p>
+            <a href="#services" class="btn">Read Our Blog</a>
+        </div>
+    </section>
+
+    <section id="services" class="section">
+        <div class="container">
+            <h2 class="section-title">Our Services</h2>
+            <div class="services">
+                <div class="service">
+                    <h3>AI Education</h3>
+                    <p>Learn the fundamentals of AI through our comprehensive courses and workshops.</p>
+                </div>
+                <div class="service">
+                    <h3>Digital Transformation</h3>
+                    <p>Transform your business with cutting-edge AI solutions and digital strategies.</p>
+                </div>
+                <div class="service">
+                    <h3>AI Research</h3>
+                    <p>Stay updated with the latest AI trends and breakthroughs through our research insights.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="about" class="about section">
+        <div class="container">
+            <h2 class="section-title">About Us</h2>
+            <div class="about-content">
+                <div class="about-text">
+                    <p>At AIDE, we aim to democratize AI education and make digital tools accessible to everyone. Whether you're a beginner or a seasoned professional, we provide resources to enhance your skills and productivity.</p>
+                </div>
+                <div class="about-image">
+                    <img src="{{ url_for('static', filename='images/about-image.jpg') }}" alt="About Us">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2024 AIDE. All rights reserved.</p>
+    </footer>
+</body>
+</html>
