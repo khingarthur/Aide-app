@@ -41,7 +41,7 @@ pipeline {
             }
         }
 
-         stage('Trigger ManifestUpdate') {
+        stage('Trigger ManifestUpdate') {
              steps{
                 build job: 'Argocd-aideapp-manifest', parameters: [string(name: 'DOCKERTAG', value: env.BUILD_NUMBER)]     
 
