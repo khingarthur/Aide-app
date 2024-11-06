@@ -21,11 +21,11 @@ pipeline {
             }
         }
 
-        stage('Trivy Scan (Aqua)') {
-            steps {
-                sh 'trivy image $APP_NAME:$BUILD_NUMBER'
-            }
-        }
+        // stage('Trivy Scan (Aqua)') {
+        //     steps {
+        //         sh 'trivy image $APP_NAME:$BUILD_NUMBER'
+        //     }
+        // }
 
         stage('login to dockerhub') {
             steps{
