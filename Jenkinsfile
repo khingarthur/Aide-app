@@ -5,7 +5,7 @@ pipeline {
         timeout(time: 10, unit: 'MINUTES')
      }
     environment {
-    DOCKERHUB_PAT = credentials('Dockerhub-pat2')
+    DOCKERHUB_PAT = credentials('Dockerhub')
     APP_NAME = "khingarthur/aide-app"
     }
     stages { 
@@ -29,7 +29,7 @@ pipeline {
 
         stage('login to dockerhub') {
             steps{
-              withCredentials([string(credentialsId: "Dockerhub-pat2", variable: "DOCKERHUB_PAT")]) {
+              withCredentials([string(credentialsId: "Dockerhub", variable: "DOCKERHUB_PAT")]) {
             sh "echo $DOCKERHUB_PAT | docker login -u khingarthur --password-stdin"      
                 }
             }
