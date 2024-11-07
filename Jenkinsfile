@@ -28,13 +28,13 @@ pipeline {
         // }
 
         stage('login to dockerhub') {
-            steps{
-              withCredentials([string(credentialsId: "Dockerhub", variable: "DOCKERHUB_PAT")]) {
-            sh "echo $DOCKERHUB_PAT | docker login -u khingarthur --password-stdin"      
+            steps {
+                withCredentials([usernamePassword(credentialsId: "Dockerhub", usernameVariable: "DOCKER_USERNAME", passwordVariable: "DOCKER_PASSWORD")]) {
+            sh "echo $DOCKER_PASSWORD | docker login -u $DOCKER_USERNAME --password-stdin"
                 }
             }
-
         }
+
         stage('push image') {
             steps{
                 sh 'docker push $APP_NAME:$BUILD_NUMBER'
