@@ -1,6 +1,6 @@
  #!/bin/bash
 
-sleep 120
+sleep 121
 sudo apt update -y
 sudo apt install python3-pip -y
 sudo apt install git -y
